@@ -1,0 +1,11 @@
+x = int(input())
+bahan = []
+
+while x!=0:
+    sisa = x%2
+    bahan.append(sisa)
+    x = x // 2
+bahan.reverse()
+for i in bahan:
+    print(i, end="")
+print()
