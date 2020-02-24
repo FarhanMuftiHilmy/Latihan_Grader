@@ -1,0 +1,34 @@
+n = int(input())
+data = []
+pelaku = []
+korban = []
+hutang = []
+keluaran = []
+totalHutang = 0
+totalPendapatan = 0
+orangygDihutang = []
+
+for i in range(n):
+    inputs = list(map(int,input().split()))
+    pelaku.append(inputs[0])
+    korban.append(inputs[1])
+    hutang.append(inputs[2])
+x = int(input())
+for i in range(n):
+    if pelaku[i] == x:
+        totalHutang = totalHutang + hutang[i]
+        orangygDihutang.append(korban[i])
+    elif korban[i] == x:
+        totalPendapatan += hutang[i]
+
+for i in range(len(orangygDihutang)):
+    orangygDihutang[i] = str(orangygDihutang[i])
+
+print(totalHutang)
+print(totalPendapatan)
+print(" ".join(orangygDihutang))
+    
+
+
+
+            
