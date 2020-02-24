@@ -1,0 +1,33 @@
+x = input()
+y = input()
+angkatan = []
+niu = []
+fakultas = []
+nif = []
+for i in range(2):
+    angkatan.append(x[i])
+
+for i in range(3, 9):
+    niu.append(x[i])
+
+for i in range(10,12):
+    fakultas.append(x[i])
+for i in range(13,18):
+    nif.append(x[i])
+
+if y == "angkatan":
+    for i in angkatan:
+        print(i, end="")
+    print()
+elif y == "NIU":
+    for i in niu:
+        print(i, end="")
+    print()
+elif y == "fakultas":
+    for i in fakultas:
+        print(i, end="")
+    print()
+elif y == "NIF":
+    for i in nif:
+        print(i, end="")
+    print()
