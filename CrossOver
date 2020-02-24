@@ -1,0 +1,14 @@
+gen1 = input()
+gen2 = input()
+tanda = input()
+hasil = []
+
+for i in range(len(tanda)):
+    if tanda[i] == "1":
+        hasil.append(gen2[i])
+    elif tanda[i] == "0":
+        hasil.append(gen1[i])
+
+for i in hasil:
+    print(i, end="")
+print()
