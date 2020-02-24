@@ -1,0 +1,44 @@
+n = int(input())
+ls = []
+
+def isEmpty(x):
+    if len(x) == 0:
+        return True
+    else:
+        return False
+
+def tampilan(x):
+    print("[ ", end="")
+    for i in ls:
+        print(str(i) + " ", end="")
+    print("]")
+    
+
+for i in range(n):
+    x = input()
+    if x[:4] == "PUSH":
+        data = int(x.split(" ")[1])
+        ls.append(data) 
+        tampilan(ls)
+    elif x[:3] == "POP" and not isEmpty(ls):
+        ls.pop()
+        tampilan(ls)
+    elif x[:7] == "POWPUSH":
+        jumlah = int(x.split(" ")[1])
+        data2 = int(x.split(" ")[2])
+        for i in range(jumlah):
+            ls.append(data2)
+        tampilan(ls)
+    elif x[:6] == "POWPOP" and not isEmpty(ls):
+        jumlah = int(x.split(" ")[1])
+        for i in range(jumlah):
+            ls.pop()
+        tampilan(ls)
+    elif isEmpty(ls) == True:
+        print("ERROR: STACK KOSONG")
+    
+    
+    
+
+
+    
