@@ -1,0 +1,27 @@
+n = int(input())
+buku = []
+
+def isEmpty(x):
+    if len(x) == 0:
+        return True
+    else:
+        return False
+
+for i in range(n):
+    inputs = list(map(str,input().split()))
+    if inputs[0] == "A" and not isEmpty(inputs):
+        del(buku[len(buku) - 1])
+    else:
+        buku.append(inputs)
+for i in range(len(buku)):
+    buku[i].reverse()
+    buku[i].pop()
+buku.reverse()
+for i in range(len(buku)):
+    buku[i].reverse()
+    print(" ".join(buku[i]))
+
+
+            
+        
+                        
